@@ -54,13 +54,16 @@ cat < file2
 # Comparing Files
 cmp file1 file2
 ## OUTPUT
+![cmp](./imgs/cmp.png)
  
 comm file1 file2
  ## OUTPUT
+ ![comm](./imgs/comm.png)
 
  
 diff file1 file2
 ## OUTPUT
+![diff](./imgs/diff.png)
 
 
 #Filters
@@ -84,65 +87,66 @@ cat > file22
 
 cut -c1-3 file11
 ## OUTPUT
-
+![catfile](./imgs/file11.png)
 
 
 
 cut -d "|" -f 1 file22
 ## OUTPUT
-
+![catfile22](./imgs/fil22.png)
 
 
 cut -d "|" -f 2 file22
 ## OUTPUT
-
+![catfile](./imgs/file221.png)
 
 cat < newfile 
 ```
 Hello world
 hello world
 ^d
-````
+```
 cat > newfile 
 Hello world
 hello world
  
 grep Hello newfile 
+
 ## OUTPUT
 
-
+![catnewfile](./imgs/newfile.png)
 
 grep hello newfile 
 ## OUTPUT
-
+![catnewfile](./imgs/newfile1.png)
 
 
 
 grep -v hello newfile 
 ## OUTPUT
 
-
+![catfile4](./imgs/newfile2.png)
 
 cat newfile | grep -i "hello"
 ## OUTPUT
 
-
+![catfile5](./imgs/newfile3.png)
 
 
 cat newfile | grep -i -c "hello"
 ## OUTPUT
 
-
+![catfile3](./imgs/newfile4.png)
 
 
 grep -R ubuntu /etc
 ## OUTPUT
-
+![catfile2](./imgs/newfile5.png)
 
 
 grep -w -n world newfile   
 ## OUTPUT
-
+![catfile1](./imgs/newfile6.png)
 
 cat < newfile 
 ```
@@ -165,60 +169,60 @@ Linux is best in this World
  ```
 egrep -w 'Hello|hello' newfile 
 ## OUTPUT
-
+![cat](./imgs/n.png)
 
 
 egrep -w '(H|h)ello' newfile 
 ## OUTPUT
-
+![cat1](./imgs/n1.png)
 
 
 egrep -w '(H|h)ell[a-z]' newfile 
 ## OUTPUT
-
+![cat2](./imgs/n2.png)
 
 
 
 egrep '(^hello)' newfile 
 ## OUTPUT
-
+![cat3](./imgs/n3.png)
 
 
 egrep '(world$)' newfile 
 ## OUTPUT
 
-
+![cat4](./imgs/n4.png)
 
 egrep '(World$)' newfile 
 ## OUTPUT
-
+![cat5](./imgs/n5.png)
 
 egrep '((W|w)orld$)' newfile 
 ## OUTPUT
 
-
+![cat7](./imgs/n6.png)
 
 egrep '[1-9]' newfile 
 ## OUTPUT
 
-
+![cat8](./imgs/n7.png)
 
 egrep 'Linux.*world' newfile 
 ## OUTPUT
-
+![cat9](./imgs/n8.png)
 
 egrep 'Linux.*World' newfile 
 ## OUTPUT
-
+![cat](./imgs/n9.png)
 
 egrep l{2} newfile
 ## OUTPUT
 
-
+![cat](./imgs/a1.png)
 
 egrep 's{1,2}' newfile
 ## OUTPUT 
-
+![cat0](./imgs/a2.png)
 
 cat > file23
 ```
@@ -236,81 +240,82 @@ cat > file23
 
 sed -n -e '3p' file23
 ## OUTPUT
-
+![cat23](./imgs/a3.png)
 
 
 sed -n -e '$p' file23
 ## OUTPUT
-
+![cat24](./imgs/a4.png)
 
 
 sed  -e 's/Ram/Sita/' file23
 ## OUTPUT
 
-
+![cat25](./imgs/a5.png)
 
 sed  -e '2s/Ram/Sita/' file23
 ## OUTPUT
-
+![cat26](./imgs/a6.png)
 
 
 sed  '/tom/s/5000/6000/' file23
 ## OUTPUT
-
+![cat27](./imgs/a7.png)
 
 
 sed -n -e '1,5p' file23
 ## OUTPUT
 
-
+![cat](./imgs/b1.png)
 
 sed -n -e '2,/Joe/p' file23
 ## OUTPUT
-
+![cat](./imgs/b2.png)
 
 
 
 sed -n -e '/tom/,/Joe/p' file23
 ## OUTPUT
-
+![cat2](./imgs/b3.png)
 
 
 seq 10 
 ## OUTPUT
+![cat3](./imgs/b4.png)
 
 
 
 seq 10 | sed -n '4,6p'
 ## OUTPUT
-
+![cat4](./imgs/b5.png)
 
 
 seq 10 | sed -n '2,~4p'
 ## OUTPUT
-
+![cat](./imgs/b6.png)
 
 
 seq 3 | sed '2a hello'
 ## OUTPUT
 
-
+![cat1](./imgs/c1.png)
 
 seq 2 | sed '2i hello'
 ## OUTPUT
-
+![cat](./imgs/c2.png)
 
 seq 10 | sed '2,9c hello'
 ## OUTPUT
-
+![cat4](./imgs/c3.png)
 
 sed -n '2,4{s/^/$/;p}' file23
 ## OUTPUT
 
-
+![cat](./imgs/c4.png)
 
 sed -n '2,4{s/$/*/;p}' file23
-
-
+## Output
+![cat](./imgs/c5.png)
 #Sorting File content
 cat > file21
 ```
@@ -322,7 +327,7 @@ cat > file21
 ``` 
 sort file21
 ## OUTPUT
-
+![cat](./imgs/c7.png)
 
 cat > file22
 ```
@@ -336,13 +341,13 @@ cat > file22
 uniq file22
 ## OUTPUT
 
-
+![cat12](./imgs/c8.png)
 
 #Using tr command
 
 cat file23 | tr [:lower:] [:upper:]
  ## OUTPUT
-
+![cat11](./imgs/c9.png)
 cat < urllist.txt
 ```
 www. yahoo. com
@@ -358,20 +363,20 @@ www. mrcet.... com
  ```
 cat urllist.txt | tr -d ' '
  ## OUTPUT
-
+![cate](./imgs/d1.png)
 
  
 cat urllist.txt | tr -d ' ' | tr -s '.'
 ## OUTPUT
-
+![cats](./imgs/d2.png)
 
 
 #Backup commands
 tar -cvf backup.tar *
 ## OUTPUT
+![catse](./imgs/d3.png)
 
-
-mkdir backupdir
+	mkdir backupdir
  
 mv backup.tar backupdir
  
